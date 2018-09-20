@@ -7,6 +7,7 @@ namespace SimpleFactory.Models
 {
     public class Factory
     {
-        //test
+        public int FactoryId { get; set; }
+        public string FactoryName { get; set; }
     }
 }
