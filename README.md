@@ -1,1 +1,1 @@
-# SimpleFactory
+# Simple Factory
