@@ -7,5 +7,6 @@ namespace SimpleFactory.Models
 {
     public class Employer
     {
+        
     }
 }
