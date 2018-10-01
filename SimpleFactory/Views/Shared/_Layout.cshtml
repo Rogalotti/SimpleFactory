@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html lang="pl"
+<head>
+	<meta charset="utf-8" />
+	<title>Poznaj Firmy</title>
+	<meta name="description" content="Prezentacja firm, sprawdz to!" />
+	<meta name="keywords" content="firma, system, nauka, kurs/ mvc" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,900&subset=latin-ext,latin' rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="logo">
+            Poznaj Firmy
+        </div>
+        <div id="menu">
+            <div class="option">Strona główna</div>
+            <div class="option">Firmy </div>
+            <div class="option">About Us </div>
+            <div style="clear:both;"> </div>
+        </div>
+        <div id="topbar">
+            <div id="topbarL">
+                <img src="../Content/Images/logo.png" />
+            </div>
+            <div id="topbarR">
+                <span class="bigtitle">O projekcie słów kilka</span>
+                <div style="height: 15px"></div>
+                Zapraszamy do zapoznania się z witryną, dzięki której poznasz nowe firmy.
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="sidebar">
+            <div class="optionL">Strona główna</div>
+            <div class="optionL">Firmy </div>
+            <div class="optionL">About Us </div>
+            <div style="clear:both;"> </div>
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            Poznaj Nas. Strona w sieci od 2018r. &copy; Wszelkie prawa zastrzeżone
+        </div>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
