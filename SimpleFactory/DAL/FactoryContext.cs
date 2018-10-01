@@ -21,10 +21,7 @@ namespace SimpleFactory.DAL
             Database.SetInitializer<FactoryContext>(new FactoryInitializer());
         }
 
-        public static FactoryContext Create()
-        {
-            return new FactoryContext();
-        }
+ 
 
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Factory> Factories { get; set; }

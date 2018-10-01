@@ -1,4 +1,5 @@
 ﻿using SimpleFactory.DAL;
+using SimpleFactory.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace SimpleFactory.Controllers
         public ActionResult Index()
         {
 
-            
+            Factory faktor = new Factory { FactoryId = 1, FactoryName = "lol" };
+            db.Factories.Add(faktor);
+            db.SaveChanges();
 
 
             return View();
