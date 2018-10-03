@@ -17,12 +17,11 @@ namespace SimpleFactory.Controllers
         public ActionResult Index()
         {
 
-            Factory faktor = new Factory { FactoryId = 1, FactoryName = "lol" };
-            db.Factories.Add(faktor);
-            db.SaveChanges();
+            var ListFactories = db.Factories.ToList();
 
-
-            return View();
+            return View(ListFactories);
         }
+
+        
     }
 }
