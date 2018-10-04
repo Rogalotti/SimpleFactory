@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div>
 <h2>Details</h2>
 
-<div>
+
     <h4>Employer</h4>
-    <hr />
+    
 
 
 
@@ -50,12 +51,13 @@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.EmployerId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.EmployerId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.FactoryId }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.EmployerId })
                 </td>
             </tr>
         }
 
     </table>
+    </div>
 
 
