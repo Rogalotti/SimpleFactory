@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SimpleFactory.DAL;
 using SimpleFactory.Models;
+using SimpleFactory.ViewModels;
 
 namespace SimpleFactory.Controllers
 {
@@ -24,16 +25,28 @@ namespace SimpleFactory.Controllers
         // GET: Factories/Details/5
         public ActionResult Details(int? id)
         {
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Factory factory = db.Factories.Find(id);
+            var factory = db.Factories.Where(x => x.FactoryId == id).ToList();
+
+            var employer = db.Employers.Where(x => x.FactoryId == id).ToList();
+        
+
             if (factory == null)
             {
                 return HttpNotFound();
             }
-            return View(factory);
+
+            var vm = new FactoryViewModel()
+            {
+                Factories = factory,
+                Employers = employer
+            };
+
+            return View(vm);
         }
 
         // GET: Factories/Create
