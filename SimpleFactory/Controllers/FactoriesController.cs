@@ -30,7 +30,7 @@ namespace SimpleFactory.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var factory = db.Factories.Where(x => x.FactoryId == id).ToList();
+            var factory = db.Factories.Find(id);
 
             var employer = db.Employers.Where(x => x.FactoryId == id).ToList();
         

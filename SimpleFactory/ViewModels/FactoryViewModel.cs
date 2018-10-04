@@ -9,6 +9,6 @@ namespace SimpleFactory.ViewModels
     public class FactoryViewModel
     {
         public IEnumerable<Employer> Employers { get; set; }
-        public IEnumerable<Factory> Factories { get; set; }
+        public Factory Factories { get; set; }
     }
 }
