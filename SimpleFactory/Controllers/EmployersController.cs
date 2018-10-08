@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SimpleFactory.DAL;
 using SimpleFactory.Models;
+using SimpleFactory.ViewModels;
 
 namespace SimpleFactory.Controllers
 {
@@ -39,6 +40,10 @@ namespace SimpleFactory.Controllers
         // GET: Employers/Create
         public ActionResult Create()
         {
+            var listOfFactories =  db.Factories.ToList();           
+            SelectList list = new SelectList(listOfFactories, "FactoryId", "FactoryName");
+            ViewBag.FactoryListName = list;
+            
             return View();
         }
 
@@ -51,6 +56,9 @@ namespace SimpleFactory.Controllers
         {
             if (ModelState.IsValid)
             {
+                var listOfFactories = db.Factories.ToList();
+                SelectList list = new SelectList(listOfFactories, "FactoryId", "FactoryName");
+                ViewBag.FactoryListName = list;
                 db.Employers.Add(employer);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -71,6 +79,11 @@ namespace SimpleFactory.Controllers
             {
                 return HttpNotFound();
             }
+
+            var listOfFactories = db.Factories.ToList();
+            SelectList list = new SelectList(listOfFactories, "FactoryId", "FactoryName");
+            ViewBag.FactoryListName = list;
+
             return View(employer);
         }
 
@@ -83,6 +96,10 @@ namespace SimpleFactory.Controllers
         {
             if (ModelState.IsValid)
             {
+                var listOfFactories = db.Factories.ToList();
+                SelectList list = new SelectList(listOfFactories, "FactoryId", "FactoryName");
+                ViewBag.FactoryListName = list;
+
                 db.Entry(employer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
