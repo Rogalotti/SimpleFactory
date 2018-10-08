@@ -17,6 +17,7 @@ namespace SimpleFactory.Models
         public string PhoneNumber { get; set; }
 
         //foreign key factory
+        [Display(Name = "Firma")]
         public int FactoryId { get; set; }
     }
 }
