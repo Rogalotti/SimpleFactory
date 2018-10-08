@@ -22,6 +22,24 @@ namespace SimpleFactory.Controllers
             return View(ListFactories);
         }
 
-        
+        [HttpPost]
+        public ActionResult Index(string searchTerm)
+        {
+
+            List<Factory> factories;
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                factories = db.Factories.ToList();
+            }
+            else
+            {
+                factories = db.Factories.Where(x => x.FactoryName.StartsWith(searchTerm)).ToList();
+            }
+
+            return View(factories);
+        }
+
+
     }
 }

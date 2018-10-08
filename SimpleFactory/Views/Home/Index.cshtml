@@ -10,6 +10,17 @@
 
 <h2>Firmy</h2>
 
+
+@using (Html.BeginForm())
+{
+    <b>Name:</b>
+    @Html.TextBox("searchTerm", null, new { id = "txtSearch"})
+    <input type="submit" value="Search" />
+}
+
+
+
+
 <ol>
     @foreach (var lista in Model)
     {
