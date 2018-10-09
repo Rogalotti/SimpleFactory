@@ -25,6 +25,8 @@ namespace SimpleFactory.DAL
 
         public DbSet<Employer> Employers { get; set; }
         public DbSet<Factory> Factories { get; set; }
+
+        public System.Data.Entity.DbSet<SimpleFactory.Models.User> Users { get; set; }
     }
 
 

@@ -123,6 +123,7 @@
     <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\FactoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="DAL\FactoryContext.cs" />
     <Compile Include="DAL\FactoryInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -130,6 +131,8 @@
     </Compile>
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\Factory.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\FactoryViewModel.cs" />
   </ItemGroup>
@@ -153,6 +156,11 @@
     <Content Include="Views\Employers\Details.cshtml" />
     <Content Include="Views\Employers\Edit.cshtml" />
     <Content Include="Views\Employers\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
